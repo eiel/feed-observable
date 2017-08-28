@@ -1,0 +1,26 @@
+{
+  "name": "feed-observable",
+  "version": "0.0.1",
+  "description": "feed parser for RxJS",
+  "main": "dist/index.js",
+  "repository": "https://github.com/eiel/feed-observable",
+  "author": "Tomohiko Himura <eiel.hal@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0"
+  },
+  "dependencies": {
+    "feedparser": "^2.2.1",
+    "request": "^2.81.0",
+    "rxjs": "^5.4.3"
+  }
+}
