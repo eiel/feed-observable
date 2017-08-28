@@ -1,7 +1,7 @@
 // @flow
 import FeedParser from 'feedparser'
 import request from 'request'
-import Rx from 'rxjs/Rx'
+import {Observable} from 'rxjs/Observable'
 
 export interface Meta
 {
@@ -40,16 +40,16 @@ export interface Item
   +meta: Meta;
 }
 
-export default ({url}: {url:string}): Rx.Observable<Item> => {
+export default ({url}: {url:string}): Observable<Item> => {
   const req = request(url);
   req.on('response', (res) => {
-    if (res.statusCode !== 200) {
+    if (res.statusCode !== 200){
       req.emit('error', new Error(`${url} Bad status code: ${res.statusCode}`));
     }
   });
 
   const feedparser = new FeedParser();
-  const source = Rx.Observable.fromEvent(feedparser, 'data')
+  const source: Observable<Item> = Observable.fromEvent(feedparser, 'data')
   req.pipe(feedparser);
   return source;
 }
