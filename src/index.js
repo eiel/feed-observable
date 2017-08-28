@@ -1,8 +1,46 @@
+// @flow
 import FeedParser from 'feedparser'
 import request from 'request'
 import Rx from 'rxjs/Rx'
 
-export default ({url}): Rx.Observable<Item> => {
+export interface Meta
+{
+  +title: string;
+  +description: string;
+  +link: string;
+  +xmlurl: string;
+  +date: string;
+  +pubdate: string;
+  +author: string;
+  +language: string;
+  +image: string;
+  +favicon: ?string;
+  +copyright: string;
+  +generator: string;
+  +categories: string[];
+}
+
+export interface Item
+{
+  +title: string;
+  +description: string;
+  +summary: string;
+  +link: string;
+  +origlink: string;
+  +permalink: string;
+  +date: string;
+  +pubdate: string;
+  +author: string;
+  +guid: string;
+  +comments: string;
+  +image: string;
+  +categories: string[];
+  +source: {url: string, title: string};
+  +enclousing: Object[];
+  +meta: Meta;
+}
+
+export default ({url}: {url:string}): Rx.Observable<Item> => {
   const req = request(url);
   req.on('response', (res) => {
     if (res.statusCode !== 200) {
@@ -13,9 +51,5 @@ export default ({url}): Rx.Observable<Item> => {
   const feedparser = new FeedParser();
   const source = Rx.Observable.fromEvent(feedparser, 'data')
   req.pipe(feedparser);
-  const appendPubMilitime = item => {
-      const pubMilitime = new Date(item.pubdate).getTime();
-      return { ...item, pubMilitime };
-  };
-  return source.map(appendPubMilitime);
+  return source;
 }
