@@ -1,6 +1,6 @@
 {
   "name": "feed-observable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "feed parser for RxJS",
   "main": "dist/index.js",
   "repository": "https://github.com/eiel/feed-observable",
@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline"
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline && for js in src/*.js; do cp $js dist/${js##*/}.flow; done"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
