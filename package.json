@@ -1,6 +1,6 @@
 {
   "name": "feed-observable",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "feed parser for RxJS",
   "main": "dist/index.js",
   "repository": "https://github.com/eiel/feed-observable",
