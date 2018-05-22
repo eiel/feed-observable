@@ -13,11 +13,11 @@
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline && flow gen-flow-files --out-dir dist src"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-flow": "^6.23.0",
-    "flow-bin": "^0.53.1"
+    "babel-cli": "6.26.0",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-flow": "6.23.0",
+    "flow-bin": "0.53.1"
   },
   "dependencies": {
     "feedparser": "^2.2.1",
