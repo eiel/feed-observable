@@ -22,6 +22,6 @@
   "dependencies": {
     "feedparser": "^2.2.1",
     "request": "^2.81.0",
-    "rxjs": "^5.4.3"
+    "rxjs": "^6.0.0"
   }
 }
