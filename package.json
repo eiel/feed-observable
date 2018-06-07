@@ -17,7 +17,7 @@
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "babel-preset-env": "1.7.0",
     "babel-preset-flow": "6.23.0",
-    "flow-bin": "0.73.0"
+    "flow-bin": "0.74.0"
   },
   "dependencies": {
     "feedparser": "^2.2.1",
