@@ -834,10 +834,10 @@ fill-range@^2.1.0:
     repeat-element "^1.1.2"
     repeat-string "^1.5.2"
 
-flow-bin@0.197.0:
-  version "0.197.0"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.197.0.tgz#a26ec0e495678676031acb414c1211d59f1d8fff"
-  integrity sha512-6g0c4Hj+JeS9nRayORAC3qUUzecX1RAjYap086yXivjfN2hlaqMYEi4ZDNPhtUOM8IqB4IE8HXPHt17uLsi0zw==
+flow-bin@0.198.0:
+  version "0.198.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.198.0.tgz#c5edf94b3f0bf4569e9a9f20b66a3f115e5f469d"
+  integrity sha512-sUNcC9FD30/4p2uSYi7WwQSMMvZNbeIMMbyjZkGfUrIJTEjb+SiLEXT3TH3SV/isFEwm7H/9k9528vhZwtoMcA==
 
 for-in@^1.0.1:
   version "1.0.2"
